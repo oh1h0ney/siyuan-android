@@ -69,7 +69,7 @@ jobs:
       # Build APK From Bundle Using Bundletool
       # Noted For Output [main_project_module]/build/outputs/bundle/release/
       - name: Build APK(s) Release from bundle using bundletool (Path same with bundle output)
-        run: java -jar ".github/lib/bundletool.jar" build-apks --bundle=${{ env.main_project_module }}/official/release/${{ env.generated_name_aab }}.aab --output=${{ env.main_project_module }}/official/release/${{ env.generated_name_aab }}.apks --mode=universal --ks="${{ env.ks_path }}" --ks-pass=pass:${{ env.ks_store_pass }} --ks-key-alias=${{ env.ks_alias }} --key-pass=pass:${{ env.ks_alias_pass }}
+        run: java -jar ".github/lib/bundletool.jar" --output=${{ env.main_project_module }}/official/release/${{ env.generated_name_aab }}.apks --mode=universal --ks="${{ env.ks_path }}" --ks-pass=pass:${{ env.ks_store_pass }} --ks-key-alias=${{ env.ks_alias }} --key-pass=pass:${{ env.ks_alias_pass }}
       
       # Noted For Output [main_project_module]/build/outputs/apk/release/
       - name: Upload APK Release - ${{ env.repository_name }}
