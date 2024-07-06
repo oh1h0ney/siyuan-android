@@ -121,6 +121,4 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           asset_paths: |
-                  app/build/outputs/bundle/officialRelease/*
-                  app/build/outputs/apk/official/release/*
-                  app/build/outputs/apk/official/debug/*
+                  app/build/outputs/bundle/officialRelease/*;app/build/outputs/apk/official/release/*;app/build/outputs/apk/official/debug/*
