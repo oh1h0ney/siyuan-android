@@ -84,6 +84,16 @@ jobs:
         run: |
           ls -l
           pwd
+          ls -l *
+          pwd
+          ls -l */*
+          pwd
+          ls -l */*/*
+          pwd
+          ls -l */*/*/*
+          pwd
+          ls -l */*/*/*/*
+          pwd
           echo ${{ env.main_project_module }}
           cd ${{ env.main_project_module }}/offical/release/
           files=(*)
