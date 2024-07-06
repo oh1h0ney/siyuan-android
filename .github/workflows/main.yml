@@ -21,10 +21,9 @@ env:
   ks_alias_pass: siyuan
 
 on:
-
   push:
-    branches:
-      - 'release/**'
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -115,3 +114,8 @@ jobs:
         with:
           name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - App bundle(s) AAB release generated
           path: ${{ env.main_project_module }}/build/outputs/bundle/officialRelease/
+
+      - uses: AButler/upload-release-assets@v3.0
+        with:
+          files: "app/build/outputs/bundle/officialRelease/*aab;app/build/outputs/apk/official/release/*apk;app/build/outputs/apk/official/debug/*apk"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
