@@ -82,7 +82,12 @@ jobs:
 
       - name: Set Env Artifact name from generated aab
         run: |
-          ls -l
+          pwd
+          ls -l app/build/outputs/*
+          pwd
+          ls -l app/build/outputs/*/*
+          pwd
+          ls -l app/build/outputs/*/*/*
           pwd
           ls -l *
           pwd
