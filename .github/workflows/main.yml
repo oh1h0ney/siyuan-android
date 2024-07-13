@@ -98,20 +98,21 @@ jobs:
       - name: Upload APK Debug - ${{ env.repository_name }}
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) debug generated
+          # name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) debug generated
+          name: ${{ env.date_today }} - debug - ${{ env.generated_name_aab }}.apk
           path: ${{ env.main_project_module }}/build/outputs/apk/official/debug/
 
       # Noted For Output [main_project_module]/build/outputs/apk/release/
       - name: Upload APK Release - ${{ env.repository_name }}
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) release generated
-          path: ${{ env.main_project_module }}/build/outputs/apk/official/release/
+          name: ${{ env.date_today }} - release - ${{ env.generated_name_aab }}.apk
+          path: ${{ env.main_project_module }}/build/outputs/apk/official/release/${{ env.generated_name_aab }}.apk
 
       # Noted For Output [main_project_module]/app/offical/release/
       - name: Upload AAB (App Bundle) Release - ${{ env.repository_name }}
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - App bundle(s) AAB release generated
-          path: ${{ env.main_project_module }}/build/outputs/bundle/officialRelease/
+          name: ${{ env.date_today }} - release - ${{ env.generated_name_aab }}.aab
+          path: ${{ env.main_project_module }}/build/outputs/bundle/officialRelease/${{ env.generated_name_aab }}.aab
 
