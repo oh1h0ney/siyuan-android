@@ -1,5 +1,5 @@
 # https://github.com/marketplace/actions/automated-build-android-app-with-github-action
-name: Generated APK AAB 2 Bundle Tool (Upload - Create Artifact To Github Action)
+name: Generated Siyuan APK to Action Artifact
 
 env:
   # The name of the main module repository
