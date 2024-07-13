@@ -95,12 +95,12 @@ jobs:
 
       # Upload Artifact Build
       # Noted For Output [main_project_module]/build/outputs/apk/debug/
-      - name: Upload APK Debug - ${{ env.repository_name }}
-        uses: actions/upload-artifact@v3
-        with:
-          # name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) debug generated
-          name: ${{ env.date_today }} - debug - ${{ env.generated_name_aab }}.apk
-          path: ${{ env.main_project_module }}/build/outputs/apk/official/debug/
+      # - name: Upload APK Debug - ${{ env.repository_name }}
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     # name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) debug generated
+      #     name: ${{ env.date_today }} - debug - ${{ env.generated_name_aab }}.apk
+      #     path: ${{ env.main_project_module }}/build/outputs/apk/official/debug/
 
       # Noted For Output [main_project_module]/build/outputs/apk/release/
       - name: Upload APK Release - ${{ env.repository_name }}
