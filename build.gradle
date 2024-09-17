@@ -2,7 +2,7 @@
 buildscript {
     ext {
         siyuanVersionCode = 238
-        siyuanVersionName = "3.1.0"
+        siyuanVersionName = "3.1.6"
     }
     repositories {
         maven { url 'https://maven.aliyun.com/repository/google' }
